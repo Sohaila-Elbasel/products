@@ -3,6 +3,7 @@ from . import models
 
 
 class ProductSerializer(serializers.ModelSerializer):
+    category = serializers.StringRelatedField(many=True, read_only=True)
 
     class Meta:
         model = models.Product
