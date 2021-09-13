@@ -10,8 +10,10 @@ from . import serializers
 def api_overview(request):
     api_urls = {
         'api Overview': '/api/v1/',
-        'view categories': '/api/v1/category/',
-        'add category': '/api/v1/category/add',
+        'view/add categories': '/api/v1/category/',
+        'delete/edit category': '/api/v1/category/<int:id>',
+        'view/add products': '/api/v1/product/',
+        'view/edit/delete product': 'api/v1/product/<int:id>' 
     }
 
     return Response(api_urls)
